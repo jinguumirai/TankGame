@@ -1,0 +1,92 @@
+[
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/cc  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/glad.c.o -c /home/jinguumirai/cplus_project/tank_game/glad.c",
+  "file": "/home/jinguumirai/cplus_project/tank_game/glad.c"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/Complete.cpp.o -c /home/jinguumirai/cplus_project/tank_game/Complete.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/Complete.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/GameLib3D.cpp.o -c /home/jinguumirai/cplus_project/tank_game/GameLib3D.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/GameLib3D.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/asset.cpp.o -c /home/jinguumirai/cplus_project/tank_game/asset.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/asset.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/base.cpp.o -c /home/jinguumirai/cplus_project/tank_game/base.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/base.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/game.cpp.o -c /home/jinguumirai/cplus_project/tank_game/game.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/game.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/gamecamera.cpp.o -c /home/jinguumirai/cplus_project/tank_game/gamecamera.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/gamecamera.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/gameplay.cpp.o -c /home/jinguumirai/cplus_project/tank_game/gameplay.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/gameplay.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/gamestatus.cpp.o -c /home/jinguumirai/cplus_project/tank_game/gamestatus.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/gamestatus.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/main_loop.cpp.o -c /home/jinguumirai/cplus_project/tank_game/main_loop.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/main_loop.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/main_process.cpp.o -c /home/jinguumirai/cplus_project/tank_game/main_process.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/main_process.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/mesh.cpp.o -c /home/jinguumirai/cplus_project/tank_game/mesh.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/mesh.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/model.cpp.o -c /home/jinguumirai/cplus_project/tank_game/model.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/model.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/pause.cpp.o -c /home/jinguumirai/cplus_project/tank_game/pause.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/pause.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/play.cpp.o -c /home/jinguumirai/cplus_project/tank_game/play.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/play.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/playstatus.cpp.o -c /home/jinguumirai/cplus_project/tank_game/playstatus.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/playstatus.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/shader.cpp.o -c /home/jinguumirai/cplus_project/tank_game/shader.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/shader.cpp"
+},
+{
+  "directory": "/home/jinguumirai/cplus_project/tank_game/build",
+  "command": "/usr/bin/c++  -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4 -g -o CMakeFiles/game.dir/title.cpp.o -c /home/jinguumirai/cplus_project/tank_game/title.cpp",
+  "file": "/home/jinguumirai/cplus_project/tank_game/title.cpp"
+}
+]

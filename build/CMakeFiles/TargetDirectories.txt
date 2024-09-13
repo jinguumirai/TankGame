@@ -1,0 +1,3 @@
+/home/jinguumirai/cplus_project/tank_game/build/CMakeFiles/game.dir
+/home/jinguumirai/cplus_project/tank_game/build/CMakeFiles/edit_cache.dir
+/home/jinguumirai/cplus_project/tank_game/build/CMakeFiles/rebuild_cache.dir
