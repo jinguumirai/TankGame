@@ -74,10 +74,15 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath, const char* geo
     glLinkProgram(ID);
     checkCompileErrors(ID, "PROGRAM");
     // delete the shaders as they're linked into our program now and no longer necessary
+    glDetachShader(ID, vertex);
     glDeleteShader(vertex);
+    glDetachShader(ID, fragment);
     glDeleteShader(fragment);
     if(geometryPath != nullptr)
+    {
+        glDetachShader(ID, geometry);
         glDeleteShader(geometry);
+    }
 }
 
 void Shader::use()
@@ -164,4 +169,9 @@ void Shader::checkCompileErrors(GLuint shader, std::string type)
             std::cout << "ERROR::PROGRAM_LINKING_ERROR of type: " << type << "\n" << infoLog << "\n -- --------------------------------------------------- -- " << std::endl;
         }
     }
+}
+
+Shader::~Shader()
+{
+    glDeleteProgram(ID);
 }

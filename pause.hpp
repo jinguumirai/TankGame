@@ -10,6 +10,7 @@ class Pause: public PlayStatus
     public:
     virtual Base * update(Base * const) override;
     Pause(const char* pause_path, GameLib3D::Framework * fra);
+    virtual ~Pause();
     virtual void draw() override;
 };
 

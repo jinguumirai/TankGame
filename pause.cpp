@@ -6,6 +6,11 @@ Pause::Pause(const char* path, GameLib3D::Framework * const fra):PlayStatus(fra)
     frame_instance->init_gl();
 }
 
+Pause::~Pause()
+{
+    ;
+}
+
 Base * Pause::update(Base * const game)
 {
     GameLib3D::InputKey input_key = frame_instance->read_once_input();

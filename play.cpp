@@ -104,23 +104,27 @@ void Play::draw()
         bullet.draw(shader);
     }
     tank.draw(shader);
-    glfwSwapBuffers(frame_instance->window);
     glActiveTexture(GL_TEXTURE10);
     glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
 }
 
 Play::~Play()
 {
-    glBindBuffer(GL_FRAMEBUFFER, 0);
+    glActiveTexture(GL_TEXTURE10);
     glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
-    glDeleteBuffers(1, &depthMapFBO);
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    glDeleteFramebuffers(1, &depthMapFBO);
     glDeleteTextures(1, &depthCubeMap);
 }
 
 Base* Play::update(Base* another_status)
 {
-    
     GameLib3D::InputKey input_key = frame_instance->read_once_input();
+
+    if (boxes.size() <= 0)
+    {
+        return new Complete("resources/congratulations.png", frame_instance);
+    }
     if (input_key == GameLib3D::P)
     {
         return another_status;

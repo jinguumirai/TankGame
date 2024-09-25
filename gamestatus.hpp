@@ -6,6 +6,7 @@ class GameStatus: public Base
 {
     public:
     GameStatus(GameLib3D::Framework * const);
+    virtual ~GameStatus();
     virtual Base * update(Base * const) override = 0;
     virtual void draw() = 0;
 };

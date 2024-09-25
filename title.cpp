@@ -10,7 +10,7 @@ Title::Title(const char * title_pic, GameLib3D::Framework * const fra_data):Game
 Base * Title::update(Base * const)
 {
     GameLib3D::InputKey input_key = frame_instance->read_once_input();
-    this->draw();
+    
     if (input_key == GameLib3D::SPACE)
     {
         GamePlay * game_play = new GamePlay(frame_instance);
@@ -21,6 +21,7 @@ Base * Title::update(Base * const)
     {
         frame_instance->destory();
     }
+    this->draw();
     return this;
 }
 

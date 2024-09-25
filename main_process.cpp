@@ -56,6 +56,7 @@ int main()
     while (!glfwWindowShouldClose(window))
     {
         framework->update();
+        glfwSwapBuffers(window);
         glfwPollEvents();
     }
     glfwTerminate();

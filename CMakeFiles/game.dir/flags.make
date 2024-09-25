@@ -7,11 +7,11 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4
 
-C_FLAGS = 
+C_FLAGS = -g
 
 CXX_DEFINES = 
 
 CXX_INCLUDES = -I/home/jinguumirai/stb_master -isystem /usr/local/include/opencv4
 
-CXX_FLAGS = 
+CXX_FLAGS = -g
 

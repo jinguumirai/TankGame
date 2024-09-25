@@ -143,7 +143,7 @@ UINT * const GameLib3D::ImageMat::data() const
 
 GameLib3D::ImageMat::~ImageMat()
 {
-    delete image_data;
+    delete[] image_data;
 }
 
 GameLib3D::Framework::Framework(const unsigned int w, const unsigned int h, GLFWwindow * windows):frame_width(w),
@@ -184,6 +184,10 @@ frame_height(h), finish(false), window(windows), texture_shader("framework.vs", 
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
 
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+
     glGenTextures(1, &texture);
 
     glActiveTexture(GL_TEXTURE0);
@@ -197,6 +201,9 @@ frame_height(h), finish(false), window(windows), texture_shader("framework.vs", 
 
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, frame_width, frame_height, 0, GL_RGB, GL_UNSIGNED_BYTE, frame_data);
     glGenerateMipmap(GL_TEXTURE_2D);
+    
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 GameLib3D::Framework::~Framework()
@@ -427,19 +434,26 @@ GameLib3D::InputKey GameLib3D::Framework::read_once_input() const
 
 void GameLib3D::Framework::init_gl()
 {
-    glDisable(GL_CULL_FACE);
-    texture_shader.use();
-    texture_shader.setInt("texture1", 0);
-    glBindVertexArray(VAO);
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    glViewport(0, 0, this->width(), this->height());
+    glDisable(GL_DEPTH_TEST);
+    glClearColor(0.1, 0.1, 0.1, 1.);
+    glClear(GL_COLOR_BUFFER_BIT); 
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texture);
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);  
 }
 
 void GameLib3D::Framework::draw()
 {
-    glClearColor(0., 0., 0., 1.);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    texture_shader.use();
+    texture_shader.setInt("texture1", 0);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-    glfwSwapBuffers(window);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, 0);
 }

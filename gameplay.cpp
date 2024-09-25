@@ -36,6 +36,7 @@ Base * GamePlay::update(Base * const base)
 
 GamePlay::~GamePlay()
 {
+
     delete play;
     delete pause;
 }

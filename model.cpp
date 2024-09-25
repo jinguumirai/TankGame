@@ -27,6 +27,7 @@ void Model::loadModel(string const &path)
 
     // process ASSIMP's root node recursively
     processNode(scene->mRootNode, scene);
+    
 }
 
     // processes a node in a recursive fashion. Processes each individual mesh located at the node and repeats this process on its children nodes (if any).
@@ -45,7 +46,6 @@ void Model::processNode(aiNode *node, const aiScene *scene)
     {
         processNode(node->mChildren[i], scene);
     }
-
 }
 
 Mesh Model::processMesh(aiMesh *mesh, const aiScene *scene)
@@ -163,6 +163,23 @@ vector<Texture> Model::loadMaterialTextures(aiMaterial *mat, aiTextureType type,
         }
     }
     return textures;
+}
+
+Model::~Model()
+{
+    /*
+    for (auto& texture: textures_loaded)
+    {
+        glDeleteTextures(1, &texture.id);
+    }
+
+    for (auto& mesh : meshes)
+    {
+        glDeleteBuffers(GL_ARRAY_BUFFER, &(mesh.VBO));
+        glDeleteBuffers(GL_ELEMENT_ARRAY_BUFFER, &(mesh.EBO));
+        glDeleteVertexArrays(1, &(mesh.VAO));
+    }
+    */
 }
 
 unsigned int TextureFromFile(const char *path, const string &directory, bool gamma)
